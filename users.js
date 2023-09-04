@@ -39,7 +39,7 @@ async function registration(uname, uemail, upassword, umobile_no, urole) {
     console.log("Registered successfully..");
   }
 }
-// registration("Harshil", "harshil18@gmail.com", "543$16", 9089384352, "user");
+registration("Virat", "virat18@gmail.com", "vk@183", 8909384235, "user");
 
 // Login --findOne()
 
@@ -64,7 +64,7 @@ async function login(uemail, upassword) {
     console.log(user);
   }
 }
-login("harshil18@gmail.com", "543$16");
+// login("harshil18@gmail.com", "543$16");
 
 // Update --updateOne()
 
