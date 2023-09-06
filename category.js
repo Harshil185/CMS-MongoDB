@@ -23,4 +23,16 @@ async function category() {
   console.log("Category Added Successfully.");
 }
 
+async function deleteCategory() {
+  const deletecate = await db
+    .collection("category")
+    .deleteOne({ name: "Sports" });
+  if (!delete1.deletedCount) {
+    console.log("Error while deleting Document.");
+    return false;
+  }
+  console.log("Document Deleted..");
+}
+
 category();
+// deleteCategory()
