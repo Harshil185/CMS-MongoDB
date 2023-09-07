@@ -1,3 +1,4 @@
+const { ObjectId } = require("mongodb");
 const db = require("./db");
 
 // Registration --insertOne()
@@ -28,6 +29,7 @@ async function registration(uname, uemail, upassword, umobile_no, urole) {
       password: upassword,
       mobile_no: umobile_no,
       role: urole,
+      contents: [ new ObjectId('64f7ab0a1c9531aa0a315074')],
       date: Date(),
     });
 
