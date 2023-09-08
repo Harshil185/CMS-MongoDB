@@ -27,7 +27,7 @@ async function deleteCategory() {
   const deletecate = await db
     .collection("category")
     .deleteOne({ name: "Sports" });
-  if (!delete1.deletedCount) {
+  if (!deletecate.deletedCount) {
     console.log("Error while deleting Document.");
     return false;
   }
