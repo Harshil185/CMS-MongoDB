@@ -41,7 +41,7 @@ async function registration(uname, uemail, upassword, umobile_no, urole) {
     console.log("Registered successfully..");
   }
 }
-registration("Virat", "virat18@gmail.com", "vk@183", 8909384235, "user");
+// registration("Virat", "virat18@gmail.com", "vk@183", 8909384235, "user");
 
 // Login --findOne()
 
@@ -72,17 +72,18 @@ async function login(uemail, upassword) {
 
 async function update() {
   const updateduser = await db.collection("users").updateOne(
-    { email: "harsh098@gmail.com" },
+    { email: "harshil18@gmail.com" },
     {
       $set: {
-        name: "harsh12",
-        email: "harsh0981@gmail.com",
-        mobile_no: 1234598760,
+        contents: [new ObjectId('64fb285ea276e81e61c81d3a'), new ObjectId('64fbec2554bb865ac8cb52fa')]
       },
     },
     { upsert: true } //Insert if not found
   );
-  if (!updateduser.modifiedCount) {
+  if (updateduser.upsertedCount) {
+    console.log("Document was not found So it is Inserted as new document.");
+    return false;
+  } else if (!updateduser.modifiedCount) {
     console.log("Updating Failed...");
     return false;
   }
@@ -95,7 +96,7 @@ async function update() {
 async function delete1() {
   const delete1 = await db
     .collection("users")
-    .deleteOne({ email: "harsh0981@gmail.com" });
+    .deleteOne({ email: "virat18@gmail.com" });
   if (!delete1.deletedCount) {
     console.log("Error while deleting Document.");
     return false;
@@ -105,5 +106,5 @@ async function delete1() {
 
 // registration("Harshil", "harshil18@gmail.com", "543$16", 908235435100,"user");
 // login("harshil@gmail.com", "har123");
-// update();
+update();
 // delete1();

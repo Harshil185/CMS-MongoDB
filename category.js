@@ -3,16 +3,16 @@ const db = require("./db");
 async function category() {
   const cate = await db.collection("category").insertMany([
     {
-        name: "Technology"
+      name: "Technology"
     },
     {
-        name: "Sports"
+      name: "Sports"
     },
     {
-        name: "Education"
+      name: "Education"
     },
     {
-        name: "Entertainment"
+      name: "Entertainment"
     }
   ]);
 
@@ -28,10 +28,10 @@ async function deleteCategory() {
     .collection("category")
     .deleteOne({ name: "Sports" });
   if (!deletecate.deletedCount) {
-    console.log("Error while deleting Document.");
+    console.log("Error while deleting Category.");
     return false;
   }
-  console.log("Document Deleted..");
+  console.log("Category Deleted..");
 }
 
 category();
