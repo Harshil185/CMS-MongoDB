@@ -2,12 +2,12 @@ const { ObjectId } = require("mongodb");
 const db = require("./db");
 
 const content = {
-  title: "20 Examples of Digital Technology",
+  title: "G20 Summit",
   content:
-    "20 Examples of Digital Technology  \n \n1. Websites \n2. Buying and Selling Online",
-  user: new ObjectId("64ec1ce1b21f2f98d8267181"),
-  category: "Technology",
-  comments: [new ObjectId('64fbe9c975921cead6607fc2'),new ObjectId('64fbe9716bff13fe0d6ec768')],
+    "AS the curtains fell on the G20 Summit Sunday, the consensus arrived in the G20 New Delhi Leaders’ Declaration set the stage for the diplomatic and political conversation on the Russia-Ukraine conflict with a hope — across the spectrum — that the text is expected to set the tone for any negotiations between the two warring sides: the West-led G7 grouping that is backing Ukraine, and Russia, which has Beijing’s support in the form of a no-limits friendship.",
+  user: new ObjectId("64f7fabfa34346831cd080c5"),
+  category: "News",
+  comments: [new ObjectId('64fbe918b04568852dafcc3b'),new ObjectId('64fbe9716bff13fe0d6ec768')],
   publish_date: Date()
 };
 
@@ -57,6 +57,6 @@ async function delete1() {
   console.log("Content Deleted..");
 }
 
-// posts();
+posts();
 // update();
 // delete1();

@@ -1,20 +1,10 @@
 const db = require("./db");
 
+// Added Categorys : Technology, Sports, Education, Entertainment, News
 async function category() {
-  const cate = await db.collection("category").insertMany([
-    {
-      name: "Technology"
-    },
-    {
-      name: "Sports"
-    },
-    {
-      name: "Education"
-    },
-    {
-      name: "Entertainment"
-    }
-  ]);
+  const cate = await db.collection("category").insertOne({
+      name: "News"
+    });
 
   if (!cate) {
     console.log("Error while adding category.");
