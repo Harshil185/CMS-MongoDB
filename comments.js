@@ -3,7 +3,7 @@ const db = require("./db");
 
 async function comments() {
   const com = await db.collection("comments").insertOne({
-    comment: "Wonderful",
+    comment: "Blah Blah shgs",
     comment_date: Date(),
   });
 

@@ -72,10 +72,10 @@ async function login(uemail, upassword) {
 
 async function update() {
   const updateduser = await db.collection("users").updateOne(
-    { email: "harshil18@gmail.com" },
+    { email: "virat18@gmail.com" },
     {
-      $set: {
-        contents: [new ObjectId('64fb285ea276e81e61c81d3a'), new ObjectId('64fbec2554bb865ac8cb52fa')]
+      $push: {
+        contents: [new ObjectId('64f7fcab7b4d79f9b9fe2cd2'),new ObjectId('64fe8a23c358d3a7a2de4026')]
       },
     },
     { upsert: true } //Insert if not found
