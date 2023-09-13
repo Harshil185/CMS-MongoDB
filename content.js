@@ -2,14 +2,25 @@ const { ObjectId } = require("mongodb");
 const db = require("./db");
 
 const content = {
-  title: "G20 Summit",
+  title: "12 cnkl",
   content:
-    "AS the curtains fell on the G20 Summit Sunday, the consensus arrived in the G20 New Delhi Leaders’ Declaration set the stage for the diplomatic and political conversation on the Russia-Ukraine conflict with a hope — across the spectrum — that the text is expected to set the tone for any negotiations between the two warring sides: the West-led G7 grouping that is backing Ukraine, and Russia, which has Beijing’s support in the form of a no-limits friendship.",
+    "new content body",
   user: new ObjectId("64f7fabfa34346831cd080c5"),
   category: "News",
   comments: [new ObjectId('64fbe918b04568852dafcc3b'),new ObjectId('64fbe9716bff13fe0d6ec768')],
-  publish_date: Date()
+  publish_date: Date(),
+  like : 0
 };
+
+async function Like() {
+  const lk = await db.collection("content").updateOne({ title: "G20 Summit" }, { $inc : { like: 1} } );
+  if (!lk) {
+    console.log("error");
+    return false;
+  } else if (lk.modifiedCount){
+    console.log("Content liked.");
+  }
+}
 
 //  Inserting Content
 
@@ -20,7 +31,7 @@ async function posts() {
     console.log("Error");
     return false;
   }
-  console.log("Content Added Successfully.");
+  console.log("Content Added Successfully." + result.insertedId);
 }
 // posts();
 
@@ -30,7 +41,7 @@ async function update() {
   const updateduser = await db.collection("content").updateOne(
     { _id : new ObjectId('64f7fcab7b4d79f9b9fe2cd2') },
     {
-      $set: {
+      $push: {
         user: new ObjectId('64f7fabfa34346831cd080c5')
       },
     },
@@ -57,6 +68,7 @@ async function delete1() {
   console.log("Content Deleted..");
 }
 
-posts();
+Like();
+// posts();
 // update();
 // delete1();
