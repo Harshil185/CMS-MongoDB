@@ -66,7 +66,7 @@ async function login(uemail, upassword) {
     console.log(user);
   }
 }
-// login("harshil18@gmail.com", "543$16");
+login("harshil18@gmail.com", "543$16");
 
 // Update --updateOne()
 
@@ -106,5 +106,5 @@ async function delete1() {
 
 // registration("Harshil", "harshil18@gmail.com", "543$16", 908235435100,"user");
 // login("harshil@gmail.com", "har123");
-update();
+// update();
 // delete1();
