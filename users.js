@@ -74,9 +74,7 @@ async function update() {
   const updateduser = await db.collection("users").updateOne(
     { email: "virat18@gmail.com" },
     {
-      $push: {
-        contents: [new ObjectId('64f7fcab7b4d79f9b9fe2cd2'),new ObjectId('64fe8a23c358d3a7a2de4026')]
-      },
+      $pop: { contents: 1 } // -1(first) 1(last)
     },
     { upsert: true } //Insert if not found
   );
