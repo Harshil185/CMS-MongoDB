@@ -2,8 +2,6 @@
 # Project Title : CMS-MONGODB `Content Management System`
 # Description : A simple CMS project for performing MongoDB CRUD operations.
 
-## Github 
-https://github.com/Harshil185/CMS-MongoDB
 
 ## Installation
 To install this project, use the following commands:
