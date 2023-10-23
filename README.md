@@ -21,7 +21,7 @@ db.js -- This JavaScript code snippet establishes a connection to a MongoDB data
 Upon successfully connecting to the server, it logs a confirmation message to the console and retrieves the specified database named 'CMS'. Finally, it exports the 'db' variable, allowing other parts of the application to access and interact with the MongoDB database.
 
 
-<!-- User file -->
+### User file 
 users.js -- This code defines a set of functions for user registration, login, update, and deletion in a MongoDB database. Here's a short description of each function:
 
 1. `registration(uname, uemail, upassword, umobile_no, urole)`: This function is used for user registration. It validates the input parameters (user name, email, password, mobile number, and role), and if they meet the criteria, it inserts a new user document into the MongoDB "users" collection. It also includes some validation checks and returns appropriate messages on failure.
@@ -35,7 +35,7 @@ users.js -- This code defines a set of functions for user registration, login, u
 In the code comments, there are examples of how to use these functions, including registration, login, update, and deletion operations with sample data. Please note that the functions return `false` on failure and display error messages, while displaying success messages when the operations are successful.
 
 
-<!-- Content file -->
+### Content file 
 content.js -- This code appears to be a JavaScript script that interacts with a MongoDB database to perform various operations related to content management. Here's a short description of the key components and actions in the code:
 
 1. Import Dependencies:
@@ -65,7 +65,7 @@ content.js -- This code appears to be a JavaScript script that interacts with a 
 The script primarily focuses on content management in a MongoDB database, including inserting, updating, deleting, and associating content with users. To perform these actions, it relies on the "db" module for database operations.
 
 
-<!-- Category file -->
+### Category file 
 category.js -- This JavaScript code is a snippet for managing categories in a database. It utilizes a module named "db" for database operations. The main features are:
 
 1. It defines an asynchronous function called `category`, which adds a category with the name "News" to the "category" collection in the database. It includes error handling and displays a success message upon adding the category.
@@ -79,7 +79,7 @@ category.js -- This JavaScript code is a snippet for managing categories in a da
 This code demonstrates the basic operations of adding and deleting categories in a database using the "db" module.
 
 
-<!-- Comment file -->
+### Comment file 
 comments.js -- This code is a JavaScript script that interacts with a MongoDB database to perform two operations: inserting a comment and deleting a comment.
 
 1. The script first imports the necessary libraries and connects to the MongoDB database using the "db" module.
