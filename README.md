@@ -16,7 +16,7 @@ To install this project, use the following commands:
 - category.js
 - comments.js
 
-<!-- Connection file -->
+### Connection file 
 db.js -- This JavaScript code snippet establishes a connection to a MongoDB database using the Node.js driver for MongoDB. It starts by importing the necessary MongoDB library, then defines the connection URL, and sets up a client to connect to the MongoDB server.
 Upon successfully connecting to the server, it logs a confirmation message to the console and retrieves the specified database named 'CMS'. Finally, it exports the 'db' variable, allowing other parts of the application to access and interact with the MongoDB database.
 
