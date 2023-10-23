@@ -1,13 +1,13 @@
 {
   "name": "cms-mongodb",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple CMS project for performing MongoDB CRUD operations.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Harshil Dholakiya",
   "license": "ISC",
   "dependencies": {
     "mongodb": "^6.0.0"
