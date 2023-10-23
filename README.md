@@ -9,7 +9,7 @@ To install this project, use the following commands:
 1. Clone the repository:
    git clone https://github.com/Harshil185/CMS-MongoDB.git
 
-<!-- Files -->
+## Files 
 - db.js
 - users.js
 - content.js
